@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+guid: 43ca2a832d1b6b44f9fd6315255be485
+=======
+guid: a20d5eeb02abb2c47be564aaa4db8e09
+>>>>>>> 8e1a998e7e3e186cbed2de86f2dada68d09bc038
+=======
+guid: 098c40d9fc0d5ec4f81f63a51e3cc1b7
+>>>>>>> origin/Marcotte
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

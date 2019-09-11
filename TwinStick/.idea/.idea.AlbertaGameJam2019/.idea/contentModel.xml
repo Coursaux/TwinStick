@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\cortland\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\cortland\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_AlbertaGameJam2019.-1020159295.00" t="ExcludeRecursive" />
+    <e p="C:\Users\cortland\Documents\AlbertaGameJam2019\AlbertaGameJam2019" t="IncludeRecursive">
+      <e p="AlbertaGameJam2019.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="DelayText.cs" t="Include" />
+        <e p="LockZ.cs" t="Include" />
+        <e p="MoveToStartSceneScript.cs" t="Include" />
+        <e p="PlayerAnimator.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="Audioscript.cs" t="Include" />
+          <e p="LoadNewArea.cs" t="Include" />
+          <e p="MonsterScene.cs" t="Include" />
+          <e p="StartGame.cs" t="Include" />
+          <e p="UIManager.cs" t="Include" />
+        </e>
+        <e p="src" t="Include">
+          <e p="AudioManager.cs" t="Include" />
+          <e p="CameraController.cs" t="Include" />
+          <e p="DashSkill.cs" t="Include" />
+          <e p="EndScript.cs" t="Include" />
+          <e p="Enemy" t="Include">
+            <e p="Boss.cs" t="Include" />
+            <e p="Boss2.cs" t="Include" />
+            <e p="ChargeForwardEnemy.cs" t="Include" />
+            <e p="EnemyController.cs" t="Include" />
+            <e p="ExplodingEnemyAnimationController.cs" t="Include" />
+            <e p="ExplodingEnmemy.cs" t="Include" />
+          </e>
+          <e p="EnemyHealthManager.cs" t="Include" />
+          <e p="Helper" t="Include">
+            <e p="Range.cs" t="Include" />
+            <e p="RangeExtensions.cs" t="Include" />
+            <e p="Safety.cs" t="Include" />
+            <e p="Timer.cs" t="Include" />
+            <e p="VectorHelper.cs" t="Include" />
+          </e>
+          <e p="InputManager.cs" t="Include" />
+          <e p="Missive" t="Include">
+            <e p="Events" t="Include">
+              <e p="GunInputEvent.cs" t="Include" />
+              <e p="LookEvent.cs" t="Include" />
+              <e p="MovementEvent.cs" t="Include" />
+              <e p="SkillDashEvent.cs" t="Include" />
+              <e p="SkilllUsedEvents" t="Include">
+                <e p="EnemyAttackEvent.cs" t="Include" />
+                <e p="EnemyDiedEvent.cs" t="Include" />
+                <e p="EnemyExplodedEvent.cs" t="Include" />
+                <e p="GunUsedEvent.cs" t="Include" />
+                <e p="SwordUsedEvent.cs" t="Include" />
+              </e>
+              <e p="SkillOneEvent.cs" t="Include" />
+              <e p="SkillThreeEvent.cs" t="Include" />
+              <e p="SkillTwoEvent.cs" t="Include" />
+              <e p="StoppedMovingEvent.cs" t="Include" />
+              <e p="SwordInputEvent.cs" t="Include" />
+            </e>
+            <e p="IMissiveListener.cs" t="Include" />
+            <e p="Missive.cs" t="Include" />
+            <e p="MissiveAggregator.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+          </e>
+          <e p="MovementController.cs" t="Include" />
+          <e p="PlayerHealthManager.cs" t="Include" />
+          <e p="Skill" t="Include">
+            <e p="KnockbackController.cs" t="Include" />
+            <e p="PistolSkill.cs" t="Include" />
+            <e p="PlayerSkill.cs" t="Include" />
+            <e p="SkillObjectControllers" t="Include">
+              <e p="PistolObjectController.cs" t="Include" />
+              <e p="SwordObjectController.cs" t="Include" />
+            </e>
+          </e>
+          <e p="SwordSkill.cs" t="Include" />
+        </e>
+        <e p="SummonBoss.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

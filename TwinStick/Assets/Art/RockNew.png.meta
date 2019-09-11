@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: fb3e43ed869e7454aa6fdd104c4b5b75
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3900891018031847651
+    second: RockNew_0
+  - first:
+      213: 7008762497949256062
+    second: RockNew_1
+  - first:
+      213: 7136151541915782128
+    second: RockNew_2
+  - first:
+      213: -5050277131164124093
+    second: RockNew_3
+  - first:
+      213: 4910732944000577538
+    second: RockNew_4
+  - first:
+      213: 6186364834022948658
+    second: RockNew_5
+  - first:
+      213: -6592012241930860655
+    second: RockNew_6
+  - first:
+      213: -3401106536496815169
+    second: RockNew_7
+  - first:
+      213: 2864666126729070691
+    second: RockNew_8
+  - first:
+      213: -593459935814736303
+    second: RockNew_9
+  - first:
+      213: 8275068526809372367
+    second: RockNew_10
+  - first:
+      213: -7524233208654736530
+    second: RockNew_11
+  - first:
+      213: -489793653940185314
+    second: RockNew_12
+  - first:
+      213: -3624951339372174718
+    second: RockNew_13
+  - first:
+      213: 8267985140093902261
+    second: RockNew_14
+  - first:
+      213: 9099875738274698914
+    second: RockNew_15
+  - first:
+      213: 4954041586990320245
+    second: RockNew_16
+  - first:
+      213: 2860647676694812974
+    second: RockNew_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RockNew_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3688
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290bcfe3485b35b49b87fc5d9eac5d9f
+      internalID: -3900891018031847651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_1
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 3688
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e711a2fa3af3be4cadfbbea58b21f79
+      internalID: 7008762497949256062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_2
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 3688
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7590cf018b048ad4f8b89ab64b8848cd
+      internalID: 7136151541915782128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_3
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 3688
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4bdacfeeb5eff6458869a82318d868f
+      internalID: -5050277131164124093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2768
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69e460bd12a91946b98d3456e70dff1
+      internalID: 4910732944000577538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_5
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 2768
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013b4fb8a9cff1949bc8291dd5a094e8
+      internalID: 6186364834022948658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_6
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 2768
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68038c1e446814745afed6012faf6d65
+      internalID: -6592012241930860655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_7
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 2768
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fab46cd472f9b4ba0e0e650f516bbf
+      internalID: -3401106536496815169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_8
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 2768
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73da28f54377e3c438fc54f952780383
+      internalID: 2864666126729070691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1848
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ee31c2e9954c24c8094fc93ffe55c8
+      internalID: -593459935814736303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_10
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1848
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41075d45cb074394aadcddb83aa5d54c
+      internalID: 8275068526809372367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_11
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1848
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7c8025cf6ed37429836b8ab1685e26
+      internalID: -7524233208654736530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_12
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 1848
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcff3d2e9521fe843bcdd890c1d8b7c4
+      internalID: -489793653940185314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_13
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 1848
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46e61e3029495840a02044eeb0f95db
+      internalID: -3624951339372174718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0a26e696d7a864bb1281684937679c
+      internalID: 8267985140093902261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_15
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 928
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59beb92379c2ed144ab0587fccd8be8a
+      internalID: 9099875738274698914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_16
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 928
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a645112ad4ffd4bb8b1c02574f28a1
+      internalID: 4954041586990320245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RockNew_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 920
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca89994bcf361b47b6686a9fca42ca9
+      internalID: 2860647676694812974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
