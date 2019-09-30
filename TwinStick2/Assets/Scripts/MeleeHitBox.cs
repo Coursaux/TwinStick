@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : PlayerObject
+public class MeleeHitBox : PlayerObject
 {
-
     private float timeSpawned;
-    private int length = 1;
+    private float length = 0.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -23,17 +22,10 @@ public class Projectile : PlayerObject
         }
     }
 
-    public void SetDmg(int _dmg)
+    public void SetDmg(int _dmg, bool _Stun, bool _Knockback)
     {
         dmg = _dmg;
-    }
-
-    void OnTriggerEnter(Collider col)
-    {
-        if (col.tag == "Enemy")
-        {
-            Destroy(this.gameObject);
-        }
-
+        Stun = _Stun;
+        Knockback = _Knockback;
     }
 }

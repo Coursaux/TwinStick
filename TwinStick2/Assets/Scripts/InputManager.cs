@@ -16,13 +16,12 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetAxis("RightTrigger") > 0)
         {
-            try
-            {
-                GameObject.Find("Pistol").GetComponent<Gun>().Fire();
-            }
-            catch
-            { }
+            GameObject.Find("Pistol").GetComponent<Gun>().Fire();
+        }
 
+        if (Input.GetAxis("LeftTrigger") > 0)
+        {
+            GameObject.Find("Bat").GetComponent<MeleeWeapon>().Swing();
         }
 
         if (Input.GetButtonDown("A"))
