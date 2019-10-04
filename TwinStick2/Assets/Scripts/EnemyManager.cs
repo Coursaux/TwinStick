@@ -6,13 +6,15 @@ public class EnemyManager : MonoBehaviour
 {
     public Transform Player;     // reference to player
     int MoveSpeed = 7;
-    int MinDist = 3;            // distance at which stops chasing player
+    int MinDist = 2;            // distance at which stops chasing player
     public int attackSpeed = 5;
     public int Damage = 25;
+    public GameObject Spawner;
 
     private float time = -10f;//ATTACK SPEED TIMER
     private float stunTime = 0f;   //time enemy becomes unstunned
-    private float stunLength = 2f;
+
+    private bool SpawnedLoot = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,22 +23,31 @@ public class EnemyManager : MonoBehaviour
     }
 
     // Update is called once per frame
+    // if not stunned, face and chase player
     void Update()
     {
-        if (Time.time > stunTime)
+        if (!this.GetComponent<HealthManager>().Dead)
         {
-            transform.LookAt(Player);
-
-            if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+            if (Time.time > stunTime)
             {
-                transform.position += transform.forward * MoveSpeed * Time.deltaTime;
-            }
+                transform.LookAt(Player);
 
-            else if (Vector3.Distance(transform.position, Player.position) < MinDist + 2 && Time.time > time + attackSpeed)
-            {
-                Player.GetComponent<HealthManager>().TakeDamage(Damage);
-                time = Time.time;
+                if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+                {
+                    transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+                }
+
+                else if (Vector3.Distance(transform.position, Player.position) < MinDist + 1 && Time.time > time + attackSpeed)
+                {
+                    Player.GetComponent<HealthManager>().TakeDamage(Damage);
+                    time = Time.time;
+                }
             }
+        }
+        if (this.GetComponent<HealthManager>().Dead && !SpawnedLoot)
+        {
+            Instantiate(Spawner, transform.position, transform.rotation);
+            //SpawnedLoot = true;
         }
     }
 
@@ -45,31 +56,31 @@ public class EnemyManager : MonoBehaviour
     {
         if (col.tag == "PlayerObject")
         {
-            this.GetComponent<HealthManager>().TakeDamage(col.gameObject.GetComponent<PlayerObject>().dmg);
+            this.GetComponent<HealthManager>().TakeDamage(col.gameObject.GetComponent<PlayerObject>().Damage);
             if (col.gameObject.GetComponent<PlayerObject>().Knockback)
             {
-                Knockback(col);
+                Knockback(col, col.gameObject.GetComponent<PlayerObject>().KnockbackDistance);
             }
 
             if (col.gameObject.GetComponent<PlayerObject>().Stun)
             {
-                Debug.Log("Stunned");
-                Stun();
+                Stun(col.gameObject.GetComponent<PlayerObject>().StunLength);
             }
+            
         }
 
     }
 
     //implements the knockback
-    private void Knockback(Collider col)
+    private void Knockback(Collider col, int KnockbackDistance)
     {
         Vector3 moveDirection = col.transform.position - this.transform.position;
-        this.GetComponent<Rigidbody>().AddForce(moveDirection.normalized * -200f);
+        this.GetComponent<Rigidbody>().AddForce(moveDirection.normalized * -KnockbackDistance);
     }
 
     //stuns the enemy
-    private void Stun()
+    private void Stun(float StunLength)
     {
-        stunTime = Time.time + stunLength;
+        stunTime = Time.time + StunLength;
     }
 }

@@ -23,11 +23,6 @@ public class Projectile : PlayerObject
         }
     }
 
-    public void SetDmg(int _dmg)
-    {
-        dmg = _dmg;
-    }
-
     void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Enemy")

@@ -153,3 +153,4 @@ MonoBehaviour:
   Player: {fileID: 5668145348064082543, guid: 9830cd9f77282b347993d1f89ff533ad, type: 3}
   attackSpeed: 2
   Damage: 25
+  Spawner: {fileID: 5207898071418553685, guid: e2008eab26d7c6140ad161e7ee17b082, type: 3}

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-
     // Start is called before the first frame update
     void Start()
     {
@@ -16,17 +15,29 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetAxis("RightTrigger") > 0)
         {
-            GameObject.Find("Pistol").GetComponent<Gun>().Fire();
+            this.GetComponentInChildren<Gun>().Fire();
         }
 
         if (Input.GetAxis("LeftTrigger") > 0)
         {
             GameObject.Find("Bat").GetComponent<MeleeWeapon>().Swing();
         }
-
-        if (Input.GetButtonDown("A"))
+        if (Input.GetButtonDown("LeftBumper"))
         {
-            Debug.Log("A");
+            GetComponentInChildren<Grenade>().Throw();
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Item")
+        {
+            if (Input.GetButtonDown("A"))
+            {
+                Debug.Log("entered");
+                this.GetComponent<Inventory>().Add(other.GetComponentInParent<Interactable>().Data);
+                Destroy(other);
+            }
         }
     }
 }

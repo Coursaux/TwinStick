@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8586423544880432999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5175035455101797283}
+  - component: {fileID: 8100693163607191190}
+  m_Layer: 0
+  m_Name: ItemDrop
+  m_TagString: Item
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5175035455101797283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586423544880432999}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.835699, y: 0.09751642, z: 4.1151924}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8100693163607191190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586423544880432999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c1513005a37e548b51aea7ca5dee59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PistolModel: {fileID: 7931094658984471818, guid: 81507b57bfc1c3b40a7d2b487a161f61,
+    type: 3}
+  Data:
+    Name: 
+    Image: {fileID: 0}
+    ItemType: 0
+    Damage: 0
+    AttackSpeed: 0
+    Capacity: 0
+    UnusedCapacity: 0
+    Stun: 0
+    StunLength: 0
+    Knockback: 0
+    KnockbackDistance: 0
+    SpawnedItemSpeed: 0
+    SpawnedItem: {fileID: 0}

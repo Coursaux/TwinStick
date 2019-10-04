@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerObject : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
 
-    public bool Stun;
-    public bool Knockback;
-    public int dmg;
-
+    //public 
     // Start is called before the first frame update
     void Start()
     {

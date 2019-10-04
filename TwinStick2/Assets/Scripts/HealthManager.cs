@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    public float TotalHealth = 100f;
+    public int TotalHealth = 100;
     private float CurrentHealth;
+    public bool Dead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,15 +25,16 @@ public class HealthManager : MonoBehaviour
 
     public void Die()
     {
-        Destroy(this.gameObject);
+        Dead = true;
     }
 
-    public void TakeDamage(float Damage)
+    public void TakeDamage(int Damage)
     {
         CurrentHealth -= Damage;
+        Debug.Log(CurrentHealth + " health");
     }
 
-    public void TakeHeal(float Heal)
+    public void TakeHeal(int Heal)
     {
         CurrentHealth += Heal;
     }

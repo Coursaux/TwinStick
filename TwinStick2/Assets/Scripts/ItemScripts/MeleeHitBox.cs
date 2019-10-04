@@ -21,11 +21,4 @@ public class MeleeHitBox : PlayerObject
             Destroy(this.gameObject);
         }
     }
-
-    public void SetDmg(int _dmg, bool _Stun, bool _Knockback)
-    {
-        dmg = _dmg;
-        Stun = _Stun;
-        Knockback = _Knockback;
-    }
 }
