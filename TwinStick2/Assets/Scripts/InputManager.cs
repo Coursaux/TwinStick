@@ -15,7 +15,7 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetAxis("RightTrigger") > 0)
         {
-            this.GetComponentInChildren<Gun>().Fire();
+            GetComponentInChildren<Gun>().Fire();
         }
 
         if (Input.GetAxis("LeftTrigger") > 0)
@@ -25,6 +25,10 @@ public class InputManager : MonoBehaviour
         if (Input.GetButtonDown("LeftBumper"))
         {
             GetComponentInChildren<Grenade>().Throw();
+        }
+        if (Input.GetButtonDown("RightBumper"))
+        {
+            GetComponentInChildren<Gun>().Reload();
         }
     }
 

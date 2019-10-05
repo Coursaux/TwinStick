@@ -49,13 +49,20 @@ MonoBehaviour:
     Name: 
     Image: {fileID: 0}
     ItemType: 0
+    Rarity: 0
     Damage: 0
     AttackSpeed: 0
     Capacity: 0
     UnusedCapacity: 0
+    Accuracy: 0
+    Range: 0
+    Piercing: 0
+    ReloadTime: 0
     Stun: 0
     StunLength: 0
     Knockback: 0
     KnockbackDistance: 0
+    ExplosionRadius: 0
     SpawnedItemSpeed: 0
     SpawnedItem: {fileID: 0}
+  Bullet: {fileID: 7248794014214049532, guid: ba156c3a96795a941b0c03c913ac3a3b, type: 3}

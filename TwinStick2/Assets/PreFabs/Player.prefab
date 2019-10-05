@@ -118,6 +118,7 @@ MonoBehaviour:
     Accuracy: 0
     Range: 0
     Piercing: 0
+    ReloadTime: 0
     Stun: 1
     StunLength: 3
     Knockback: 1
@@ -345,10 +346,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  TotalGrenades: 0
-  CurrentGrenades: 0
-  TotalPistolRounds: 0
-  CurrentPistolRounds: 0
+  TotalGrenades: 2
+  CurrentGrenades: 2
+  TotalPistolRounds: 18
+  CurrentPistolRounds: 18
   TotalShotgunRounds: 0
   CurrentShotgunRounds: 0
   TotalAssaultRounds: 0

@@ -7,22 +7,33 @@ public class Interactable : MonoBehaviour
 
     public GameObject PistolModel;
     public ItemData Data = new ItemData();
+    public GameObject Bullet;
 
-    //private PistolBaseData BasePistol;
+    private PistolBase BasePistol = new PistolBase();
 
     public void SetType(itemtype ItemType)
     {
-        if ( true) // ItemType == itemtype.pistol)
+        if (ItemType == itemtype.pistol)
         {
             GameObject item = Instantiate(PistolModel, transform.position, transform.rotation) as GameObject;
             item.transform.parent = this.transform;
+            Data.ItemType = ItemType;
+            Data.Damage = Random.Range(BasePistol.DamageMin, BasePistol.DamageCap + 1);
+            Data.AttackSpeed = Random.Range(BasePistol.AttackSpeedMin, BasePistol.AttackSpeedCap);
+            Data.Accuracy = Random.Range(BasePistol.AccuracyMin, BasePistol.AccuracyCap + 1);
+            Data.Range = BasePistol.Range;
+            Data.ReloadTime = BasePistol.ReloadTime;
+            Data.Capacity = BasePistol.Capacity;
+            Data.UnusedCapacity = BasePistol.Capacity;
+            Data.SpawnedItemSpeed = BasePistol.SpawnedItemSpeed;
+            Data.SpawnedItem = Bullet;
         }
     }
 
     public void PickUp()
     {
         Inventory.instance.Add(Data);
-        DestroyImmediate(this.gameObject);
+        Destroy(this.gameObject);
     }
 }
 

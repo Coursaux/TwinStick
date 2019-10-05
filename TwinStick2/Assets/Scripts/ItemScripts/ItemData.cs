@@ -20,6 +20,7 @@ public class ItemData
     public float Accuracy;
     public int Range;
     public bool Piercing;
+    public float ReloadTime;
     public bool Stun;
     public float StunLength;
     public bool Knockback;

@@ -47,7 +47,7 @@ public class EnemyManager : MonoBehaviour
         if (this.GetComponent<HealthManager>().Dead && !SpawnedLoot)
         {
             Instantiate(Spawner, transform.position, transform.rotation);
-            //SpawnedLoot = true;
+            SpawnedLoot = true;
         }
     }
 
