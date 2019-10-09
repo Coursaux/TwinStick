@@ -6,26 +6,25 @@ public class Gun : Item
 {
     private float lastShot = -10f;
 
-    public float ReloadStart;
-    public bool Reloading = false;
+    public float reloadStart;
+    public bool reloading = false;
 
     public void Fire()
     {
-        if (data.UnusedCapacity > 0 && Time.time > data.AttackSpeed + lastShot)
+        if (data.unusedCapacity > 0 && Time.time > data.attackSpeed + lastShot)
         {
-            Debug.Log(transform.rotation);
-            GameObject bullet = Instantiate(data.SpawnedItem, transform.Find("Spawner").gameObject.transform.position, transform.rotation) as GameObject;
-            bullet.GetComponent<Projectile>().SetDmg(data.Damage, data.Stun, data.StunLength, data.Knockback, data.KnockbackDistance, data.Piercing, data.ExplosionRadius);
-            bullet.GetComponent<Rigidbody>().AddForce(transform.forward * data.SpawnedItemSpeed + transform.right * Random.Range((-data.Accuracy * data.SpawnedItemSpeed), (data.Accuracy * data.SpawnedItemSpeed)));
-            data.UnusedCapacity -= 1;
-            if (data.UnusedCapacity == 0)
+            GameObject bullet = Instantiate(data.spawnedItem, transform.Find("Spawner").gameObject.transform.position, transform.rotation) as GameObject;
+            bullet.GetComponent<Projectile>().SetDmg(data.damage, data.stun, data.stunLength, data.knockback, data.knockbackDistance, data.piercing, data.explosionRadius);
+            bullet.GetComponent<Rigidbody>().AddForce(transform.forward * data.spawnedItemSpeed + transform.right * Random.Range((-data.accuracy * data.spawnedItemSpeed), (data.accuracy * data.spawnedItemSpeed)));
+            data.unusedCapacity -= 1;
+            if (data.unusedCapacity == 0)
             {
                 Reload();
             }
 
             lastShot = Time.time;
         }
-        else if(data.UnusedCapacity == 0)
+        else if(data.unusedCapacity == 0)
         {
             Reload();
         }
@@ -33,10 +32,10 @@ public class Gun : Item
 
     public void Reload()
     {
-        if (!Reloading)
+        if (!reloading)
         {
-            ReloadStart = Time.time;
-            Reloading = true;
+            reloadStart = Time.time;
+            reloading = true;
         }
     }
 }

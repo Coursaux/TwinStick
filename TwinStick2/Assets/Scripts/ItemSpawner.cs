@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
 {
-    public GameObject ItemDrop;
+    public GameObject itemDrop;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +21,8 @@ public class ItemSpawner : MonoBehaviour
 
     private void Generate()
     {
-        itemtype item = (itemtype)Random.Range(0, 1);
-        GameObject spawned = Instantiate(ItemDrop, transform.position, transform.rotation) as GameObject;
+        ItemType item = (ItemType)Random.Range(0, 1);
+        GameObject spawned = Instantiate(itemDrop, transform.position, transform.rotation) as GameObject;
         spawned.GetComponent<Interactable>().SetType(item);
     }
 }

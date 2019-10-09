@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    bool inventoryOpen = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,17 +32,24 @@ public class InputManager : MonoBehaviour
         {
             GetComponentInChildren<Gun>().Reload();
         }
+
+        if (Input.GetButtonDown("Inventory"))
+        {
+            inventoryOpen = !inventoryOpen;
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Item")
         {
-            if (Input.GetButtonDown("A"))
+            if (Input.GetButtonDown("A") && !inventoryOpen)
             {
-                Debug.Log("entered");
-                this.GetComponent<Inventory>().Add(other.GetComponentInParent<Interactable>().Data);
-                Destroy(other);
+                bool added = this.GetComponent<Inventory>().Add(other.GetComponentInParent<Interactable>().data);
+                if (added)
+                {
+                    Destroy(other);
+                }
             }
         }
     }

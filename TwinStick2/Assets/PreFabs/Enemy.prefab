@@ -137,7 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec69533050e379a4f8a9f8bbd74f5754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TotalHealth: 100
+  totalHealth: 100
+  currentHealth: 0
+  dead: 0
 --- !u!114 &6049108496111360715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144229755dbd78a4aa5964c51197a9dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 5668145348064082543, guid: 9830cd9f77282b347993d1f89ff533ad, type: 3}
+  player: {fileID: 5668145348064082543, guid: 9830cd9f77282b347993d1f89ff533ad, type: 3}
   attackSpeed: 2
-  Damage: 25
-  Spawner: {fileID: 5207898071418553685, guid: e2008eab26d7c6140ad161e7ee17b082, type: 3}
+  damage: 25
+  spawner: {fileID: 5207898071418553685, guid: e2008eab26d7c6140ad161e7ee17b082, type: 3}

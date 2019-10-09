@@ -8,14 +8,14 @@ public class Grenade : Item
 
     public void Throw()
     {
-        if (Time.time > data.AttackSpeed + lastThrow)
+        if (Time.time > data.attackSpeed + lastThrow)
         {
-            if (GetComponentInParent<Inventory>().CurrentGrenades > 0)
+            if (GetComponentInParent<Inventory>().currentGrenades > 0)
             {
-                GameObject grenade = Instantiate(data.SpawnedItem, transform.position, transform.rotation) as GameObject;
-                grenade.GetComponent<ThrownGrenade>().SetDmg(data.Damage, data.Stun, data.StunLength, data.Knockback, data.KnockbackDistance, data.Piercing, data.ExplosionRadius);
-                grenade.GetComponent<Rigidbody>().AddForce(transform.forward * data.SpawnedItemSpeed + transform.up * data.SpawnedItemSpeed);
-                GetComponentInParent<Inventory>().CurrentGrenades -= 1;
+                GameObject grenade = Instantiate(data.spawnedItem, transform.position, transform.rotation) as GameObject;
+                grenade.GetComponent<ThrownGrenade>().SetDmg(data.damage, data.stun, data.stunLength, data.knockback, data.knockbackDistance, data.piercing, data.explosionRadius);
+                grenade.GetComponent<Rigidbody>().AddForce(transform.forward * data.spawnedItemSpeed + transform.up * data.spawnedItemSpeed);
+                GetComponentInParent<Inventory>().currentGrenades -= 1;
                 lastThrow = Time.time;
             }
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeleeWeapon : Item
 {
-    private float LastSwing = -10f;
+    private float lastSwing = -10f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,11 +20,11 @@ public class MeleeWeapon : Item
 
     public void Swing()
     {
-        if (Time.time > data.AttackSpeed + LastSwing)
+        if (Time.time > data.attackSpeed + lastSwing)
         {
-            GameObject box = Instantiate(data.SpawnedItem, transform.position, transform.rotation) as GameObject;
-            box.GetComponent<MeleeHitBox>().SetDmg(data.Damage, data.Stun, data.StunLength, data.Knockback, data.KnockbackDistance, data.Piercing, data.ExplosionRadius);
-            LastSwing = Time.time;
+            GameObject box = Instantiate(data.spawnedItem, transform.position, transform.rotation) as GameObject;
+            box.GetComponent<MeleeHitBox>().SetDmg(data.damage, data.stun, data.stunLength, data.knockback, data.knockbackDistance, data.piercing, data.explosionRadius);
+            lastSwing = Time.time;
         }
     }
 }

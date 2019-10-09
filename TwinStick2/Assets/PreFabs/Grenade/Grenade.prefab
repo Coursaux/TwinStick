@@ -92,22 +92,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data:
-    Name: 
-    Image: {fileID: 0}
-    ItemType: 5
-    Rarity: 0
-    Damage: 80
-    AttackSpeed: 3
-    Capacity: 0
-    UnusedCapacity: 0
-    Accuracy: 0
-    Range: 0
-    Piercing: 0
-    Stun: 0
-    StunLength: 0
-    Knockback: 1
-    KnockbackDistance: 800
-    ExplosionRadius: 10
-    SpawnedItemSpeed: 300
-    SpawnedItem: {fileID: 6843341729826365964, guid: 0c5a1091b298ce542b9c17de4224f1e4,
+    name: 
+    image: {fileID: 0}
+    itemType: 5
+    rarity: 0
+    damage: 80
+    attackSpeed: 5
+    capacity: 0
+    unusedCapacity: 0
+    accuracy: 0
+    range: 0
+    piercing: 0
+    reloadTime: 0
+    stun: 0
+    stunLength: 0
+    knockback: 1
+    knockbackDistance: 200
+    explosionRadius: 10
+    spawnedItemSpeed: 0
+    spawnedItem: {fileID: 6843341729826365964, guid: 0c5a1091b298ce542b9c17de4224f1e4,
       type: 3}

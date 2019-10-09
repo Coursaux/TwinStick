@@ -22,31 +22,106 @@ public class Inventory : MonoBehaviour
 
     public List<ItemData> items = new List<ItemData>();
 
-    public int TotalGrenades;
-    public int CurrentGrenades;
+    public int totalGrenades;
+    public int currentGrenades;
 
-    public int TotalPistolRounds;
-    public int CurrentPistolRounds;
+    public int totalPistolRounds;
+    public int currentPistolRounds;
 
-    public int TotalShotgunRounds;
-    public int CurrentShotgunRounds;
+    public int totalShotgunRounds;
+    public int currentShotgunRounds;
 
-    public int TotalAssaultRounds;
-    public int CurrentAssaultRounds;
+    public int totalAssaultRounds;
+    public int currentAssaultRounds;
 
-    public int TotalLMGounds;
-    public int CurrentLMGRounds;
+    public int totalLMGounds;
+    public int currentLMGRounds;
 
-    public int TotalSniperRounds;
-    public int CurrentSniperRounds;
+    public int totalSniperRounds;
+    public int currentSniperRounds;
 
-    public void Add(ItemData item)
+    public ItemData primary = null;
+    public ItemData secondary;
+    public ItemData equippedGrenade;
+    public ItemData equippedMelee;
+
+    public int space = 20;
+
+    public delegate void OnItemChanged();
+    public OnItemChanged onItemChangedCallback;
+
+    public delegate void OnWeaponChange();
+    public OnWeaponChange onWeaponChangedCallback;
+
+    public GameObject pistol;
+
+    void Start()
     {
+        secondary.damage = 0;
+        if (onWeaponChangedCallback != null)
+            onWeaponChangedCallback.Invoke();
+    }
+
+    public bool Add(ItemData item)
+    {
+        if (secondary.damage == 0)
+        {
+            
+            secondary = item;
+            return true;
+        }
+        if (items.Count >= space)
+        {
+            return false;
+        }
         items.Add(item);
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
+        return true;
     }
 
     public void Remove(ItemData item)
     {
         items.Remove(item);
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
+    }
+
+    // spaghetti
+    public ItemData Equip(ItemData item)
+    {
+        ItemData temp = null;
+        ItemType type = primary.itemType;
+        if (item != null)
+        {
+            if (primary != null)
+            {
+                string sType = type.ToString();
+                Destroy(GameObject.Find(sType + "(Clone)"));
+            }
+            GameObject gun = null;
+            if (type == ItemType.Pistol)
+            {
+                gun = Instantiate(pistol, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
+            }
+            gun.transform.SetParent(transform.Find("GunPlacement"));
+            gun.GetComponent<Gun>().data = item;
+
+            temp = primary;
+            primary = item;
+            if (onWeaponChangedCallback != null)
+                onWeaponChangedCallback.Invoke();
+        }
+        return temp;
+
+    }
+
+    public void SwitchWeapons()
+    {
+        ItemData temp = primary;
+        primary = secondary;
+        secondary = temp;
+        if (onWeaponChangedCallback != null)
+            onWeaponChangedCallback.Invoke();
     }
 }

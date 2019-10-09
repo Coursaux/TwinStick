@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class PistolBase
 {
-    public int DamageCap = 7;
-    public int DamageMin = 3;
-    public float AttackSpeedCap = 0.10f;
-    public float AttackSpeedMin = 0.20f;
-    public float AccuracyCap = 0.15f;
-    public float AccuracyMin = 0.25f;
+    public int damageCap = 7;
+    public int damageMin = 3;
+    public float attackSpeedCap = 0.10f;
+    public float attackSpeedMin = 0.20f;
+    public float accuracyCap = 0.15f;
+    public float accuracyMin = 0.25f;
 
-    public int Range = 20;
-    public float ReloadTime = 2;
+    public int range = 20;
+    public float reloadTime = 2;
 
-    public int Capacity = 9;
-    public bool Piercing = false;
-    public bool Stun = false;
-    public bool Knockback = false;
-    public int SpawnedItemSpeed = 900; // look at feet per second for context
+    public int capacity = 9;
+    public bool piercing = false;
+    public bool stun = false;
+    public bool knockback = false;
+    public int spawnedItemSpeed = 900; // look at feet per second for context
 }

@@ -43,26 +43,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c1513005a37e548b51aea7ca5dee59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PistolModel: {fileID: 7931094658984471818, guid: 81507b57bfc1c3b40a7d2b487a161f61,
+  pistolModel: {fileID: 7931094658984471818, guid: 81507b57bfc1c3b40a7d2b487a161f61,
     type: 3}
-  Data:
-    Name: 
-    Image: {fileID: 0}
-    ItemType: 0
-    Rarity: 0
-    Damage: 0
-    AttackSpeed: 0
-    Capacity: 0
-    UnusedCapacity: 0
-    Accuracy: 0
-    Range: 0
-    Piercing: 0
-    ReloadTime: 0
-    Stun: 0
-    StunLength: 0
-    Knockback: 0
-    KnockbackDistance: 0
-    ExplosionRadius: 0
-    SpawnedItemSpeed: 0
-    SpawnedItem: {fileID: 0}
-  Bullet: {fileID: 7248794014214049532, guid: ba156c3a96795a941b0c03c913ac3a3b, type: 3}
+  data:
+    name: 
+    image: {fileID: 0}
+    itemType: 0
+    rarity: 0
+    damage: 0
+    attackSpeed: 0
+    capacity: 0
+    unusedCapacity: 0
+    accuracy: 0
+    range: 0
+    piercing: 0
+    reloadTime: 0
+    stun: 0
+    stunLength: 0
+    knockback: 0
+    knockbackDistance: 0
+    explosionRadius: 0
+    spawnedItemSpeed: 0
+    spawnedItem: {fileID: 0}
+  bullet: {fileID: 7248794014214049532, guid: ba156c3a96795a941b0c03c913ac3a3b, type: 3}

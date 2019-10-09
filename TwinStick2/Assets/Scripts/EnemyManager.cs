@@ -4,50 +4,50 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public Transform Player;     // reference to player
-    int MoveSpeed = 7;
-    int MinDist = 2;            // distance at which stops chasing player
+    public Transform player;     // reference to player
+    int moveSpeed = 7;
+    int minDist = 2;            // distance at which stops chasing player
     public int attackSpeed = 5;
-    public int Damage = 25;
-    public GameObject Spawner;
+    public int damage = 25;
+    public GameObject spawner;
 
     private float time = -10f;//ATTACK SPEED TIMER
     private float stunTime = 0f;   //time enemy becomes unstunned
 
-    private bool SpawnedLoot = false;
+    private bool spawnedLoot = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.FindWithTag("Player").transform;
+        player = GameObject.FindWithTag("Player").transform;
     }
 
     // Update is called once per frame
     // if not stunned, face and chase player
     void Update()
     {
-        if (!this.GetComponent<HealthManager>().Dead)
+        if (!this.GetComponent<HealthManager>().dead)
         {
             if (Time.time > stunTime)
             {
-                transform.LookAt(Player);
+                transform.LookAt(player);
 
-                if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+                if (Vector3.Distance(transform.position, player.position) >= minDist)
                 {
-                    transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+                    transform.position += transform.forward * moveSpeed * Time.deltaTime;
                 }
 
-                else if (Vector3.Distance(transform.position, Player.position) < MinDist + 1 && Time.time > time + attackSpeed)
+                else if (Vector3.Distance(transform.position, player.position) < minDist + 1 && Time.time > time + attackSpeed)
                 {
-                    Player.GetComponent<HealthManager>().TakeDamage(Damage);
+                    player.GetComponent<HealthManager>().TakeDamage(damage);
                     time = Time.time;
                 }
             }
         }
-        if (this.GetComponent<HealthManager>().Dead && !SpawnedLoot)
+        if (this.GetComponent<HealthManager>().dead && !spawnedLoot)
         {
-            Instantiate(Spawner, transform.position, transform.rotation);
-            SpawnedLoot = true;
+            Instantiate(spawner, transform.position, transform.rotation);
+            spawnedLoot = true;
         }
     }
 
@@ -56,15 +56,15 @@ public class EnemyManager : MonoBehaviour
     {
         if (col.tag == "PlayerObject")
         {
-            this.GetComponent<HealthManager>().TakeDamage(col.gameObject.GetComponent<PlayerObject>().Damage);
-            if (col.gameObject.GetComponent<PlayerObject>().Knockback)
+            this.GetComponent<HealthManager>().TakeDamage(col.gameObject.GetComponent<PlayerObject>().damage);
+            if (col.gameObject.GetComponent<PlayerObject>().knockback)
             {
-                Knockback(col, col.gameObject.GetComponent<PlayerObject>().KnockbackDistance);
+                Knockback(col, col.gameObject.GetComponent<PlayerObject>().knockbackDistance);
             }
 
-            if (col.gameObject.GetComponent<PlayerObject>().Stun)
+            if (col.gameObject.GetComponent<PlayerObject>().stun)
             {
-                Stun(col.gameObject.GetComponent<PlayerObject>().StunLength);
+                Stun(col.gameObject.GetComponent<PlayerObject>().stunLength);
             }
             
         }
@@ -72,15 +72,15 @@ public class EnemyManager : MonoBehaviour
     }
 
     //implements the knockback
-    private void Knockback(Collider col, int KnockbackDistance)
+    private void Knockback(Collider col, int knockbackDistance)
     {
         Vector3 moveDirection = col.transform.position - this.transform.position;
-        this.GetComponent<Rigidbody>().AddForce(moveDirection.normalized * -KnockbackDistance);
+        this.GetComponent<Rigidbody>().AddForce(moveDirection.normalized * -knockbackDistance);
     }
 
     //stuns the enemy
-    private void Stun(float StunLength)
+    private void Stun(float stunLength)
     {
-        stunTime = Time.time + StunLength;
+        stunTime = Time.time + stunLength;
     }
 }

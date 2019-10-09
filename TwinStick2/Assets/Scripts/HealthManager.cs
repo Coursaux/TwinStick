@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    public int TotalHealth = 100;
-    private float CurrentHealth;
-    public bool Dead = false;
+    public int totalHealth = 100;
+    public int currentHealth;
+    public bool dead = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        CurrentHealth = TotalHealth;
+        currentHealth = totalHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (CurrentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -25,17 +25,16 @@ public class HealthManager : MonoBehaviour
 
     public void Die()
     {
-        Dead = true;
+        dead = true;
     }
 
     public void TakeDamage(int Damage)
     {
-        CurrentHealth -= Damage;
-        Debug.Log(CurrentHealth + " health");
+        currentHealth -= Damage;
     }
 
     public void TakeHeal(int Heal)
     {
-        CurrentHealth += Heal;
+        currentHealth += Heal;
     }
 }

@@ -6,19 +6,19 @@ public class Pistol : Gun
 {
     void Update()
     {
-        if (Time.time > ReloadStart + data.ReloadTime && Reloading)
+        if (Time.time > reloadStart + data.reloadTime && reloading)
         {
-            if (GetComponentInParent<Inventory>().CurrentPistolRounds < data.Capacity)
+            if (GetComponentInParent<Inventory>().currentPistolRounds < data.capacity)
             {
-                data.UnusedCapacity = GetComponentInParent<Inventory>().CurrentPistolRounds;
-                GetComponentInParent<Inventory>().CurrentPistolRounds = 0;
+                data.unusedCapacity = GetComponentInParent<Inventory>().currentPistolRounds;
+                GetComponentInParent<Inventory>().currentPistolRounds = 0;
             }
             else
             {
-                data.UnusedCapacity = data.Capacity;
-                GetComponentInParent<Inventory>().CurrentPistolRounds -= data.Capacity;
+                data.unusedCapacity = data.capacity;
+                GetComponentInParent<Inventory>().currentPistolRounds -= data.capacity;
             }
-            Reloading = false;
+            reloading = false;
         }
     }
 }
