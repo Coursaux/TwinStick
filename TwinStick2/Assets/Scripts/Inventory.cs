@@ -54,12 +54,13 @@ public class Inventory : MonoBehaviour
     public OnWeaponChange onWeaponChangedCallback;
 
     public GameObject pistol;
+    public GameObject assault;
+
+    float switchTime = -10f;
 
     void Start()
     {
-        secondary.damage = 0;
-        if (onWeaponChangedCallback != null)
-            onWeaponChangedCallback.Invoke();
+
     }
 
     public bool Add(ItemData item)
@@ -100,9 +101,13 @@ public class Inventory : MonoBehaviour
                 Destroy(GameObject.Find(sType + "(Clone)"));
             }
             GameObject gun = null;
-            if (type == ItemType.Pistol)
+            if (item.itemType == ItemType.Pistol)
             {
                 gun = Instantiate(pistol, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
+            }
+            else if (item.itemType == ItemType.Assault)
+            {
+                gun = Instantiate(assault, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
             }
             gun.transform.SetParent(transform.Find("GunPlacement"));
             gun.GetComponent<Gun>().data = item;
@@ -118,10 +123,35 @@ public class Inventory : MonoBehaviour
 
     public void SwitchWeapons()
     {
-        ItemData temp = primary;
-        primary = secondary;
-        secondary = temp;
-        if (onWeaponChangedCallback != null)
-            onWeaponChangedCallback.Invoke();
+        if (Time.time > switchTime)
+        {
+            switchTime = Time.time + 0.2f;
+            ItemType type = primary.itemType;
+            if (secondary != null)
+            {
+                if (primary != null)
+                {
+                    string sType = type.ToString();
+                    Destroy(GameObject.Find(sType + "(Clone)"));
+                }
+                GameObject gun = null;
+                if (secondary.itemType == ItemType.Pistol)
+                {
+                    gun = Instantiate(pistol, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
+                }
+                else if (secondary.itemType == ItemType.Assault)
+                {
+                    gun = Instantiate(assault, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
+                }
+                gun.transform.SetParent(transform.Find("GunPlacement"));
+
+                ItemData temp;
+                temp = primary;
+                primary = secondary;
+                secondary = temp;
+                if (onWeaponChangedCallback != null)
+                    onWeaponChangedCallback.Invoke();
+            }
+        }
     }
 }

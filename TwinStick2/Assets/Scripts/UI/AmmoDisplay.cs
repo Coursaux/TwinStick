@@ -17,6 +17,9 @@ public class AmmoDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ammo.text = player.GetComponent<Inventory>().currentPistolRounds + " / " + player.GetComponentInChildren<Pistol>().data.unusedCapacity;
+        if (player.GetComponent<Inventory>().primary.itemType == ItemType.Pistol)
+            ammo.text = player.GetComponent<Inventory>().currentPistolRounds + " / " + player.GetComponentInChildren<Gun>().data.unusedCapacity;
+        if (player.GetComponent<Inventory>().primary.itemType == ItemType.Assault)
+            ammo.text = player.GetComponent<Inventory>().currentAssaultRounds + " / " + player.GetComponentInChildren<Gun>().data.unusedCapacity;
     }
 }

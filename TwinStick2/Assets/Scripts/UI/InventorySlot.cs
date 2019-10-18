@@ -9,10 +9,14 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, ISelectHandler
     public Image icon;
     bool entered = false;
     private Inventory inventory;
+    private Text looking;
+    private Text equipped;
 
     void Start()
     {
         inventory = GetComponentInParent<InventoryUI>().inventory;
+        looking = GameObject.Find("Looking").GetComponent<Text>();
+        equipped = GameObject.Find("Equipped").GetComponent<Text>();
     }
 
     void Update()
@@ -25,6 +29,12 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, ISelectHandler
         if (entered && Input.GetButtonDown("Y"))
         {
             ClearSlot();
+        }
+
+        if (entered && item != null)
+        {
+            looking.text = "Highlighted\n" + item.name + "\nDamage: " + item.damage + "\nRoF: " + item.attackSpeed.ToString("F2") + "\nAccuracy: " + item.accuracy.ToString("F2");
+            equipped.text = "Eqipped\n" + inventory.primary.name + "\nDamage: " + inventory.primary.damage + "\nRoF: " + inventory.primary.attackSpeed.ToString("F2") + "\nAccuracy: " + inventory.primary.accuracy.ToString("F2");
         }
     }
 
@@ -46,6 +56,7 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, ISelectHandler
     public void OnPointerExit(PointerEventData eventData)
     {
         entered = false;
+        looking.text = "";
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -61,5 +72,6 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, ISelectHandler
     public void OnDeselect(BaseEventData eventData)
     {
         entered = false;
+        looking.text = "";
     }
 }

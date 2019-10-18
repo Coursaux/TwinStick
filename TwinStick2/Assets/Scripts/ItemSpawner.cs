@@ -13,15 +13,9 @@ public class ItemSpawner : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void Generate()
     {
-        ItemType item = (ItemType)Random.Range(0, 1);
+        ItemType item = (ItemType)Random.Range(0, 2);
         GameObject spawned = Instantiate(itemDrop, transform.position, transform.rotation) as GameObject;
         spawned.GetComponent<Interactable>().SetType(item);
     }

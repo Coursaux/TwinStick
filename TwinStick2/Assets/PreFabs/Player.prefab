@@ -440,7 +440,8 @@ MonoBehaviour:
     spawnedItemSpeed: 0
     spawnedItem: {fileID: 0}
   space: 20
-  pistol: {fileID: 6119018576805147927}
+  pistol: {fileID: 7862621820571301609, guid: e890aee7ed6f6694e8226c18ed1cf530, type: 3}
+  assault: {fileID: 7862621820571301609, guid: 35f9416e8c594a847a6a03a68fb7b63d, type: 3}
 --- !u!1 &5948120512227695101
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,12 +588,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e890aee7ed6f6694e8226c18ed1cf530, type: 3}
---- !u!1 &6119018576805147927 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7862621820571301609, guid: e890aee7ed6f6694e8226c18ed1cf530,
-    type: 3}
-  m_PrefabInstance: {fileID: 4176730327649059838}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6119018576805147912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7862621820571301622, guid: e890aee7ed6f6694e8226c18ed1cf530,

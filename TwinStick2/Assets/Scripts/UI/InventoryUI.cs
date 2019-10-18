@@ -6,6 +6,7 @@ public class InventoryUI : MonoBehaviour
 {
     public Transform itemsParent;
     public GameObject inventoryUI;
+    public GameObject tooltip;
 
     public Inventory inventory;
 
@@ -26,6 +27,7 @@ public class InventoryUI : MonoBehaviour
         if (Input.GetButtonDown("Inventory"))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
+            tooltip.SetActive(!tooltip.activeSelf);
         }
     }
 

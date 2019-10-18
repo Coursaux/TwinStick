@@ -37,6 +37,10 @@ public class InputManager : MonoBehaviour
         {
             inventoryOpen = !inventoryOpen;
         }
+        if (Input.GetButtonDown("Y") && !inventoryOpen)
+        {
+            gameObject.GetComponent<Inventory>().SwitchWeapons();
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -45,11 +49,7 @@ public class InputManager : MonoBehaviour
         {
             if (Input.GetButtonDown("A") && !inventoryOpen)
             {
-                bool added = this.GetComponent<Inventory>().Add(other.GetComponentInParent<Interactable>().data);
-                if (added)
-                {
-                    Destroy(other);
-                }
+                other.GetComponentInParent<Interactable>().PickUp();
             }
         }
     }

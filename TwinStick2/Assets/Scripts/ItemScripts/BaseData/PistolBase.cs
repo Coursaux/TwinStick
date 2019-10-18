@@ -18,5 +18,5 @@ public class PistolBase
     public bool piercing = false;
     public bool stun = false;
     public bool knockback = false;
-    public int spawnedItemSpeed = 900; // look at feet per second for context
+    public int spawnedItemSpeed = 2000; // look at feet per second for context
 }
