@@ -55,6 +55,9 @@ public class Inventory : MonoBehaviour
 
     public GameObject pistol;
     public GameObject assault;
+    public GameObject LMG;
+    public GameObject Sniper;
+    public GameObject Shotgun;
 
     float switchTime = -10f;
 
@@ -109,6 +112,18 @@ public class Inventory : MonoBehaviour
             {
                 gun = Instantiate(assault, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
             }
+            else if (item.itemType == ItemType.LMG)
+            {
+                gun = Instantiate(LMG, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
+            }
+            else if (item.itemType == ItemType.Sniper)
+            {
+                gun = Instantiate(Sniper, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
+            }
+            else if (item.itemType == ItemType.Shotgun)
+            {
+                gun = Instantiate(Shotgun, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
+            }
             gun.transform.SetParent(transform.Find("GunPlacement"));
             gun.GetComponent<Gun>().data = item;
 
@@ -142,6 +157,18 @@ public class Inventory : MonoBehaviour
                 else if (secondary.itemType == ItemType.Assault)
                 {
                     gun = Instantiate(assault, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
+                }
+                else if (secondary.itemType == ItemType.LMG)
+                {
+                    gun = Instantiate(LMG, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
+                }
+                else if (secondary.itemType == ItemType.Sniper)
+                {
+                    gun = Instantiate(Sniper, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
+                }
+                else if (secondary.itemType == ItemType.Shotgun)
+                {
+                    gun = Instantiate(Shotgun, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
                 }
                 gun.transform.SetParent(transform.Find("GunPlacement"));
 

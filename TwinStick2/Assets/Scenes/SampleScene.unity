@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1223,11 +1223,6 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5668145348064082540, guid: 9830cd9f77282b347993d1f89ff533ad,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 5668145348064082543, guid: 9830cd9f77282b347993d1f89ff533ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1283,6 +1278,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5668145348064082540, guid: 9830cd9f77282b347993d1f89ff533ad,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5668145347514094345, guid: 9830cd9f77282b347993d1f89ff533ad,
         type: 3}
       propertyPath: item
@@ -1334,6 +1334,16 @@ PrefabInstance:
         type: 3}
       propertyPath: currentAssaultRounds
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6882735344369725370, guid: 9830cd9f77282b347993d1f89ff533ad,
+        type: 3}
+      propertyPath: totalLMGounds
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6882735344369725370, guid: 9830cd9f77282b347993d1f89ff533ad,
+        type: 3}
+      propertyPath: currentLMGRounds
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6119018576805147927, guid: 9830cd9f77282b347993d1f89ff533ad,
         type: 3}

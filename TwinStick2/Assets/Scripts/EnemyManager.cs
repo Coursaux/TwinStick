@@ -28,19 +28,23 @@ public class EnemyManager : MonoBehaviour
     {
         if (!this.GetComponent<HealthManager>().dead)
         {
-            if (Time.time > stunTime)
+            if (Vector3.Distance(player.position, this.gameObject.transform.position) < 20 || 
+                this.GetComponent<HealthManager>().totalHealth < this.GetComponent<HealthManager>().totalHealth)
             {
-                transform.LookAt(player);
-
-                if (Vector3.Distance(transform.position, player.position) >= minDist)
+                if (Time.time > stunTime)
                 {
-                    transform.position += transform.forward * moveSpeed * Time.deltaTime;
-                }
+                    transform.LookAt(player);
 
-                else if (Vector3.Distance(transform.position, player.position) < minDist + 1 && Time.time > time + attackSpeed)
-                {
-                    player.GetComponent<HealthManager>().TakeDamage(damage);
-                    time = Time.time;
+                    if (Vector3.Distance(transform.position, player.position) >= minDist)
+                    {
+                        transform.position += transform.forward * moveSpeed * Time.deltaTime;
+                    }
+
+                    else if (Vector3.Distance(transform.position, player.position) < minDist + 1 && Time.time > time + attackSpeed)
+                    {
+                        player.GetComponent<HealthManager>().TakeDamage(damage);
+                        time = Time.time;
+                    }
                 }
             }
         }

@@ -47,6 +47,8 @@ MonoBehaviour:
     type: 3}
   assaultModel: {fileID: 7931094658984471818, guid: d11d981e6265e3844bddeb660f28015b,
     type: 3}
+  LMGModel: {fileID: 7931094658984471818, guid: 4ab1e0c7ad9c89344ab3f7591ddb9af5,
+    type: 3}
   data:
     name: 
     image: {fileID: 21300000, guid: 96c5f39c14195694cb601d2ec05b6198, type: 3}

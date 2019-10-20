@@ -27,7 +27,10 @@ public class Projectile : PlayerObject
     {
         if (col.tag == "Enemy")
         {
-            Destroy(this.gameObject);
+            if (!piercing)
+            {
+                Destroy(this.gameObject);
+            }
         }
 
     }

@@ -21,5 +21,11 @@ public class AmmoDisplay : MonoBehaviour
             ammo.text = player.GetComponent<Inventory>().currentPistolRounds + " / " + player.GetComponentInChildren<Gun>().data.unusedCapacity;
         if (player.GetComponent<Inventory>().primary.itemType == ItemType.Assault)
             ammo.text = player.GetComponent<Inventory>().currentAssaultRounds + " / " + player.GetComponentInChildren<Gun>().data.unusedCapacity;
+        if (player.GetComponent<Inventory>().primary.itemType == ItemType.LMG)
+            ammo.text = player.GetComponent<Inventory>().currentLMGRounds + " / " + player.GetComponentInChildren<Gun>().data.unusedCapacity;
+        if (player.GetComponent<Inventory>().primary.itemType == ItemType.Sniper)
+            ammo.text = player.GetComponent<Inventory>().currentSniperRounds + " / " + player.GetComponentInChildren<Gun>().data.unusedCapacity;
+        if (player.GetComponent<Inventory>().primary.itemType == ItemType.Shotgun)
+            ammo.text = player.GetComponent<Inventory>().currentShotgunRounds + " / " + player.GetComponentInChildren<Gun>().data.unusedCapacity;
     }
 }

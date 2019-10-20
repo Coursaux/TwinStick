@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Gun : Item
 {
-    private float lastShot = -10f;
+    [HideInInspector] public float lastShot = -10f;
 
     public float reloadStart;
     public bool reloading = false;
 
-    public void Fire()
+    public virtual void Fire()
     {
         if (data.unusedCapacity > 0 && Time.time > data.attackSpeed + lastShot)
         {
