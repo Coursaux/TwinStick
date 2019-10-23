@@ -15,31 +15,41 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("RightTrigger") > 0)
+        if (GlobalVariables.controller)
         {
-            GetComponentInChildren<Gun>().Fire();
-        }
+            if (Input.GetAxis("RightTrigger") > 0)
+            {
+                GetComponentInChildren<Gun>().Fire();
+            }
 
-        if (Input.GetAxis("LeftTrigger") > 0)
-        {
-            GameObject.Find("Bat").GetComponent<MeleeWeapon>().Swing();
-        }
-        if (Input.GetButtonDown("LeftBumper"))
-        {
-            GetComponentInChildren<Grenade>().Throw();
-        }
-        if (Input.GetButtonDown("RightBumper"))
-        {
-            GetComponentInChildren<Gun>().Reload();
-        }
+            if (Input.GetAxis("LeftTrigger") > 0)
+            {
+                GameObject.Find("Bat").GetComponent<MeleeWeapon>().Swing();
+            }
 
-        if (Input.GetButtonDown("Inventory"))
-        {
-            inventoryOpen = !inventoryOpen;
+            if (Input.GetButtonDown("LeftBumper"))
+            {
+                GetComponentInChildren<Grenade>().Throw();
+            }
+
+            if (Input.GetButtonDown("RightBumper"))
+            {
+                GetComponentInChildren<Gun>().Reload();
+            }
+
+            if (Input.GetButtonDown("Inventory"))
+            {
+                inventoryOpen = !inventoryOpen;
+            }
+
+            if (Input.GetButtonDown("Y") && !inventoryOpen)
+            {
+                gameObject.GetComponent<Inventory>().SwitchWeapons();
+            }
         }
-        if (Input.GetButtonDown("Y") && !inventoryOpen)
+        else if (!GlobalVariables.controller)
         {
-            gameObject.GetComponent<Inventory>().SwitchWeapons();
+            Debug.Log("Not Controller");
         }
     }
 

@@ -156,6 +156,8 @@ MonoBehaviour:
     knockbackDistance: 0
     explosionRadius: 0
     spawnedItemSpeed: 0
-    spawnedItem: {fileID: 0}
+    spawnedItem: {fileID: 7248794014214049532, guid: ba156c3a96795a941b0c03c913ac3a3b,
+      type: 3}
+  lastShot: -10
   reloadStart: 0
   reloading: 0

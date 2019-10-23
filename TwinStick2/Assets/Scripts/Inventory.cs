@@ -63,7 +63,7 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
-
+        primary = GetComponentInChildren<Gun>().data;
     }
 
     public bool Add(ItemData item)
@@ -94,15 +94,12 @@ public class Inventory : MonoBehaviour
     // spaghetti
     public ItemData Equip(ItemData item)
     {
-        ItemData temp = null;
+        ItemData temp = GetComponentInChildren<Gun>().data;
         ItemType type = primary.itemType;
         if (item != null)
         {
-            if (primary != null)
-            {
-                string sType = type.ToString();
-                Destroy(GameObject.Find(sType + "(Clone)"));
-            }
+            string sType = type.ToString();
+            Destroy(GameObject.Find(sType + "(Clone)"));
             GameObject gun = null;
             if (item.itemType == ItemType.Pistol)
             {
@@ -125,15 +122,11 @@ public class Inventory : MonoBehaviour
                 gun = Instantiate(Shotgun, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
             }
             gun.transform.SetParent(transform.Find("GunPlacement"));
-            gun.GetComponent<Gun>().data = item;
 
-            temp = primary;
+            gun.GetComponent<Gun>().data = item;
             primary = item;
-            if (onWeaponChangedCallback != null)
-                onWeaponChangedCallback.Invoke();
         }
         return temp;
-
     }
 
     public void SwitchWeapons()
@@ -141,14 +134,12 @@ public class Inventory : MonoBehaviour
         if (Time.time > switchTime)
         {
             switchTime = Time.time + 0.2f;
+            ItemData temp = GetComponentInChildren<Gun>().data;
             ItemType type = primary.itemType;
             if (secondary != null)
             {
-                if (primary != null)
-                {
-                    string sType = type.ToString();
-                    Destroy(GameObject.Find(sType + "(Clone)"));
-                }
+                string sType = type.ToString();
+                Destroy(GameObject.Find(sType + "(Clone)"));
                 GameObject gun = null;
                 if (secondary.itemType == ItemType.Pistol)
                 {
@@ -171,13 +162,9 @@ public class Inventory : MonoBehaviour
                     gun = Instantiate(Shotgun, transform.Find("GunPlacement").gameObject.transform.position, transform.rotation) as GameObject;
                 }
                 gun.transform.SetParent(transform.Find("GunPlacement"));
-
-                ItemData temp;
-                temp = primary;
                 primary = secondary;
                 secondary = temp;
-                if (onWeaponChangedCallback != null)
-                    onWeaponChangedCallback.Invoke();
+                gun.GetComponent<Gun>().data = primary;
             }
         }
     }

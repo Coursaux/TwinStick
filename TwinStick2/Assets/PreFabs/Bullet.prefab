@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7248794014214049532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.37636995}
-  m_LocalScale: {x: 0.28506, y: 0.28506, z: 0.28506}
+  m_LocalScale: {x: 0.11224237, y: 0.11224237, z: 0.11224237}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -106,9 +106,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc603747e938a444880424a6839264ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Stun: 0
-  Knockback: 0
-  dmg: 0
+  stun: 0
+  stunLength: 0
+  knockback: 0
+  knockbackDistance: 0
+  damage: 0
+  piercing: 0
+  explosionRadius: 0
 --- !u!54 &3919764607373652724
 Rigidbody:
   m_ObjectHideFlags: 0

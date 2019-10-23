@@ -49,6 +49,10 @@ MonoBehaviour:
     type: 3}
   LMGModel: {fileID: 7931094658984471818, guid: 4ab1e0c7ad9c89344ab3f7591ddb9af5,
     type: 3}
+  SniperModel: {fileID: 7931094658984471818, guid: 45978067b597e9842b326825d67c54e4,
+    type: 3}
+  ShotgunModel: {fileID: 7931094658984471818, guid: 2ad0551ab41e23048b2f3589d1477ca7,
+    type: 3}
   data:
     name: 
     image: {fileID: 21300000, guid: 96c5f39c14195694cb601d2ec05b6198, type: 3}
