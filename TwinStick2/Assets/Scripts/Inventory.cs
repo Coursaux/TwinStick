@@ -34,7 +34,7 @@ public class Inventory : MonoBehaviour
     public int totalAssaultRounds;
     public int currentAssaultRounds;
 
-    public int totalLMGounds;
+    public int totalLMGRounds;
     public int currentLMGRounds;
 
     public int totalSniperRounds;
@@ -96,7 +96,7 @@ public class Inventory : MonoBehaviour
     {
         ItemData temp = GetComponentInChildren<Gun>().data;
         ItemType type = primary.itemType;
-        if (item != null)
+        if (item.name != "")
         {
             string sType = type.ToString();
             Destroy(GameObject.Find(sType + "(Clone)"));

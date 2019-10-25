@@ -24,7 +24,7 @@ public class InputManager : MonoBehaviour
 
             if (Input.GetAxis("LeftTrigger") > 0)
             {
-                GameObject.Find("Bat").GetComponent<MeleeWeapon>().Swing();
+                GetComponentInChildren<MeleeWeapon>().Swing();
             }
 
             if (Input.GetButtonDown("LeftBumper"))
@@ -49,7 +49,35 @@ public class InputManager : MonoBehaviour
         }
         else if (!GlobalVariables.controller)
         {
-            Debug.Log("Not Controller");
+            if (Input.GetAxis("ShootM+K") > 0)
+            {
+                GetComponentInChildren<Gun>().Fire();
+            }
+
+            if (Input.GetAxis("MeleeM+K") > 0)
+            {
+                GetComponentInChildren<MeleeWeapon>().Swing();
+            }
+
+            if (Input.GetButtonDown("GrenadeM+K"))
+            {
+                GetComponentInChildren<Grenade>().Throw();
+            }
+
+            if (Input.GetButtonDown("ReloadM+K"))
+            {
+                GetComponentInChildren<Gun>().Reload();
+            }
+
+            if (Input.GetButtonDown("Inventory"))
+            {
+                inventoryOpen = !inventoryOpen;
+            }
+
+            if (Input.GetAxis("SwitchM+K") != 0 && !inventoryOpen)
+            {
+                gameObject.GetComponent<Inventory>().SwitchWeapons();
+            }
         }
     }
 

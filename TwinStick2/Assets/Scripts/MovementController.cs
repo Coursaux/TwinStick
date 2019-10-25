@@ -26,8 +26,16 @@ public class MovementController : MonoBehaviour
             inventoryOpen = !inventoryOpen;
         }
 
+        Vector3 PlayerDirection = new Vector3();
+        if (GlobalVariables.controller)
+        {
             //Rotate Character
-            var PlayerDirection = Vector3.right * Input.GetAxis("RHorizontal") + Vector3.forward * -Input.GetAxis("RVertical");
+            PlayerDirection = Vector3.right * Input.GetAxis("RHorizontal") + Vector3.forward * -Input.GetAxis("RVertical");
+        }
+        else if (!GlobalVariables.controller)
+        {
+            PlayerDirection = Vector3.right * Input.GetAxis("Mouse X") + Vector3.forward * -Input.GetAxis("Mouse Y");
+        }
 
         if (PlayerDirection.sqrMagnitude > 0.0f)
         {

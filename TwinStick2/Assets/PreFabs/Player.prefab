@@ -112,7 +112,7 @@ MonoBehaviour:
     itemType: 7
     rarity: 0
     damage: 20
-    attackSpeed: 5
+    attackSpeed: 2
     capacity: 0
     unusedCapacity: 0
     accuracy: 0
@@ -293,7 +293,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 3}
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5668145348064082541
 MonoBehaviour:
@@ -356,7 +356,7 @@ MonoBehaviour:
   currentShotgunRounds: 0
   totalAssaultRounds: 0
   currentAssaultRounds: 0
-  totalLMGounds: 0
+  totalLMGRounds: 0
   currentLMGRounds: 0
   totalSniperRounds: 0
   currentSniperRounds: 0
@@ -659,7 +659,7 @@ PrefabInstance:
     - target: {fileID: 6875174445933430767, guid: d9956a28173e5ab4aa2a2ac054b31d46,
         type: 3}
       propertyPath: data.damage
-      value: 80
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 6875174445933430767, guid: d9956a28173e5ab4aa2a2ac054b31d46,
         type: 3}
@@ -680,6 +680,11 @@ PrefabInstance:
         type: 3}
       propertyPath: data.explosionRadius
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875174445933430767, guid: d9956a28173e5ab4aa2a2ac054b31d46,
+        type: 3}
+      propertyPath: data.spawnedItemSpeed
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5383630198667558887, guid: d9956a28173e5ab4aa2a2ac054b31d46, type: 3}

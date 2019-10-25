@@ -109,6 +109,6 @@ MonoBehaviour:
     knockback: 1
     knockbackDistance: 200
     explosionRadius: 10
-    spawnedItemSpeed: 0
+    spawnedItemSpeed: 1000
     spawnedItem: {fileID: 6843341729826365964, guid: 0c5a1091b298ce542b9c17de4224f1e4,
       type: 3}

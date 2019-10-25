@@ -11,19 +11,28 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, ISelectHandler
     private Inventory inventory;
     private Text looking;
     private Text equipped;
+    private Text secondary;
+    private Text grenade;
+    private Text melee;
 
     void Start()
     {
         inventory = GetComponentInParent<InventoryUI>().inventory;
-        looking = GameObject.Find("Looking").GetComponent<Text>();
-        equipped = GameObject.Find("Equipped").GetComponent<Text>();
+        looking = GameObject.Find("LookingText").GetComponent<Text>();
+        equipped = GameObject.Find("EquippedText").GetComponent<Text>();
+        secondary = GameObject.Find("SecondaryText").GetComponent<Text>();
+        grenade = GameObject.Find("GrenadeText").GetComponent<Text>();
+        melee = GameObject.Find("MeleeText").GetComponent<Text>();
     }
 
     void Update()
     {
+        equipped.text = "Equipped\n" + inventory.primary.name + "\nDamage: " + inventory.primary.damage + "\nRoF: " + inventory.primary.attackSpeed.ToString("F2") + "\nAccuracy: " + inventory.primary.accuracy.ToString("F2");
+        secondary.text = "Secondary\n" + inventory.secondary.name + "\nDamage: " + inventory.secondary.damage + "\nRoF: " + inventory.secondary.attackSpeed.ToString("F2") + "\nAccuracy: " + inventory.secondary.accuracy.ToString("F2");
         if (entered && Input.GetButtonDown("A"))
         {
-            item = inventory.Equip(item);
+            if (!(item == null)) 
+                item = inventory.Equip(item);
         }
 
         if (entered && Input.GetButtonDown("Y"))
@@ -34,7 +43,6 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, ISelectHandler
         if (entered && item != null)
         {
             looking.text = "Highlighted\n" + item.name + "\nDamage: " + item.damage + "\nRoF: " + item.attackSpeed.ToString("F2") + "\nAccuracy: " + item.accuracy.ToString("F2");
-            equipped.text = "Eqipped\n" + inventory.primary.name + "\nDamage: " + inventory.primary.damage + "\nRoF: " + inventory.primary.attackSpeed.ToString("F2") + "\nAccuracy: " + inventory.primary.accuracy.ToString("F2");
         }
     }
 

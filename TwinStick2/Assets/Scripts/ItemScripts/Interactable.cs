@@ -55,7 +55,7 @@ public class Interactable : MonoBehaviour
         {
             GameObject item = Instantiate(LMGModel, transform.position, transform.rotation) as GameObject;
             item.transform.parent = this.transform;
-            data.name = "LMG Rifle";
+            data.name = "LMG";
             data.itemType = itemType;
             data.damage = Random.Range(baseLMG.damageMin, baseLMG.damageCap + 1);
             data.attackSpeed = Random.Range(baseLMG.attackSpeedMin, baseLMG.attackSpeedCap);
@@ -86,7 +86,7 @@ public class Interactable : MonoBehaviour
         {
             GameObject item = Instantiate(ShotgunModel, transform.position, transform.rotation) as GameObject;
             item.transform.parent = this.transform;
-            data.name = "Shotgun Rifle";
+            data.name = "Shotgun";
             data.itemType = itemType;
             data.damage = Random.Range(baseShotgun.damageMin, baseShotgun.damageCap + 1);
             data.attackSpeed = Random.Range(baseShotgun.attackSpeedMin, baseShotgun.attackSpeedCap);

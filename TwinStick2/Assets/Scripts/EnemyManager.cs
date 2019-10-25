@@ -10,6 +10,7 @@ public class EnemyManager : MonoBehaviour
     public int attackSpeed = 5;
     public int damage = 25;
     public GameObject spawner;
+    public GameObject ammo;
 
     private float time = -10f;//ATTACK SPEED TIMER
     private float stunTime = 0f;   //time enemy becomes unstunned
@@ -28,7 +29,7 @@ public class EnemyManager : MonoBehaviour
     {
         if (!this.GetComponent<HealthManager>().dead)
         {
-            if (Vector3.Distance(player.position, this.gameObject.transform.position) < 20 || 
+            if (Vector3.Distance(player.position, this.gameObject.transform.position) < 15 || 
                 this.GetComponent<HealthManager>().totalHealth < this.GetComponent<HealthManager>().totalHealth)
             {
                 if (Time.time > stunTime)
@@ -50,7 +51,12 @@ public class EnemyManager : MonoBehaviour
         }
         if (this.GetComponent<HealthManager>().dead && !spawnedLoot)
         {
+            GetComponent<Renderer>().material.color = new Color(0.5f, 0.5f, 0.5f, 1);
             Instantiate(spawner, transform.position, transform.rotation);
+            if (Random.Range(0, 2) == 0)
+            {
+                Instantiate(ammo, transform.position, transform.rotation);
+            }
             spawnedLoot = true;
         }
     }
