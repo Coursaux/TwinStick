@@ -5,9 +5,9 @@ using UnityEngine;
 public class PistolBase
 {
     public int damageCap = 7;
-    public int damageMin = 3;
-    public float attackSpeedCap = 0.10f;
-    public float attackSpeedMin = 0.20f;
+    public int damageMin = 4;
+    public float attackSpeedCap = 0.20f;
+    public float attackSpeedMin = 0.30f;
     public float accuracyCap = 0.15f;
     public float accuracyMin = 0.25f;
 

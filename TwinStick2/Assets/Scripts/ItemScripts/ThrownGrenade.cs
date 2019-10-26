@@ -36,6 +36,7 @@ public class ThrownGrenade : PlayerObject
                     if (hit.tag == "Enemy")
                     {
                         hit.GetComponent<HealthManager>().TakeDamage(damage);
+                        hit.GetComponent<EnemyManager>().Stun(1f);
                     }
                 }
             }

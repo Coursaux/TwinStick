@@ -89,7 +89,7 @@ public class EnemyManager : MonoBehaviour
     }
 
     //stuns the enemy
-    private void Stun(float stunLength)
+    public void Stun(float stunLength)
     {
         stunTime = Time.time + stunLength;
     }

@@ -15,6 +15,8 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, ISelectHandler
     private Text grenade;
     private Text melee;
 
+    private float equipTime = -10f;
+
     void Start()
     {
         inventory = GetComponentInParent<InventoryUI>().inventory;
@@ -29,14 +31,16 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, ISelectHandler
     {
         equipped.text = "Equipped\n" + inventory.primary.name + "\nDamage: " + inventory.primary.damage + "\nRoF: " + inventory.primary.attackSpeed.ToString("F2") + "\nAccuracy: " + inventory.primary.accuracy.ToString("F2");
         secondary.text = "Secondary\n" + inventory.secondary.name + "\nDamage: " + inventory.secondary.damage + "\nRoF: " + inventory.secondary.attackSpeed.ToString("F2") + "\nAccuracy: " + inventory.secondary.accuracy.ToString("F2");
-        if (entered && Input.GetButtonDown("A"))
+        if (Time.time > equipTime + 0.2f && entered && (Input.GetButtonDown("A") || Input.GetButtonDown("ShootM+K")))
         {
+            equipTime = Time.time;
             if (!(item == null)) 
                 item = inventory.Equip(item);
         }
 
-        if (entered && Input.GetButtonDown("Y"))
+        if (Time.time > equipTime + 0.2f && entered && (Input.GetButtonDown("Y") || Input.GetButtonDown("MeleeM+K")))
         {
+            equipTime = Time.time;
             ClearSlot();
         }
 

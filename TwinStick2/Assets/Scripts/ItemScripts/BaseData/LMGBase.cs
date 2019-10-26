@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class LMGBase
 {
-    public int damageCap = 6;
+    public int damageCap = 5;
     public int damageMin = 3;
     public float attackSpeedCap = 0.1f;
     public float attackSpeedMin = 0.2f;
-    public float accuracyCap = 0.15f;
+    public float accuracyCap = 0.25f;
     public float accuracyMin = 0.35f;
 
     public int range = 20;

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public static class GlobalVariables
 {
-    public static bool controller = true;
+    public static bool controller = false;
 }
